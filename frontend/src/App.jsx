@@ -1,4 +1,3 @@
-// App.jsx
 import { useLayoutEffect } from "react";
 import LoadingPage from "./components/LoadingPage";
 import gsap from "gsap";
@@ -20,7 +19,7 @@ export default function App() {
       yoyo: true,
       delay: 0.5,
       stagger: {
-        amount: 1.5,
+        amount: 0.5,
         from: "start",
         grid: [3,3],
       },
@@ -40,13 +39,16 @@ export default function App() {
   });
 
   return (
-    <>
+    <div className="bg-black h-screen">
       <LoadingPage />
       {showHello && (
-        <div className="h-screen bg-black flex items-center justify-center">
-          <h1 className="text-white text-8xl font-bold">Hello</h1>
+        <div className="h-screen flex items-center justify-center">
+          <h5 className="glowing-text text-[#b0dae9] text-5xl font-bold uppercase">
+            Hola <br/>
+            Amigo
+          </h5>
         </div>
       )}
-    </>
+    </div>
   );
 }
