@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Log files
+logs/
+*.log
+
+# Build directories
+build/
+dist/
+
+# Cache
+.cache/
+.npm/
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# IDE specific files
+.vscode/
+.idea/
+
+# MacOS specific files
+.DS_Store
+
+# Temporary files
+tmp/
+temp/
