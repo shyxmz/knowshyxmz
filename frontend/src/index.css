@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.box{
-    box-shadow: 0 0 10px #10abdf;
+.box {
+    box-shadow: 0 0 3px #10abdf;
 }
 

@@ -1,13 +1,30 @@
-import React, { useLayoutEffect, useState } from "react";
+import React, { useLayoutEffect, useState, useEffect } from "react";
 import LoadingPage from "./components/Loading/LoadingPage";
 import HomeNavbar from "./components/Navbar/HomeNavbar";
 import gsap from "gsap";
 import TextScramble from "./components/Effects/TextScramble"; // Import the TextScramble component
+import CursorPointer from "./components/Cursor/Cursor"; // Import the custom cursor
 
 export default function App() {
+  const [x, setX] = useState(0);
+  const [y, setY] = useState(0);
+
   const [isLoading, setIsLoading] = useState(true);
   const [showHola, setShowHola] = useState(false);
   const [showContent, setShowContent] = useState(false);
+
+  // Handle mouse movement to update cursor position
+  useEffect(() => {
+    const handleMouseMovement = (e) => {
+      setX(e.clientX);
+      setY(e.clientY);
+    };
+    document.addEventListener("mousemove", handleMouseMovement);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMovement);
+    };
+  }, []);
 
   useLayoutEffect(() => {
     let t1 = gsap.timeline();
@@ -46,18 +63,21 @@ export default function App() {
         setTimeout(() => {
           setShowHola(false); // Hide the "Hola Amigo" text
           setShowContent(true); // Show the main content
-        }, 1000); // Adjust timing as needed
+        }, 1300); // Adjust timing as needed
       },
     });
   }, []);
 
   return (
-    <div className="bg-white h-screen"> {/* Change the background color to white */}
+    <div className="bg-[#F5F5F5] h-screen relative"> {/* Added relative positioning */}
+      <CursorPointer x={x} y={y} /> {/* Custom cursor component */}
       {isLoading ? (
         <LoadingPage />
       ) : showHola ? (
-        <div className="h-screen flex items-center justify-center">
-          <TextScramble text="Hola Amigo" />
+        <div className="h-screen bg-[#F5F5F5] flex items-center justify-center">
+          <div className="text-6xl font-bold text-[#333333]"> {/* Style the text as needed */}
+            <TextScramble text="Hola Amigo" />
+          </div>
         </div>
       ) : (
         showContent && (
