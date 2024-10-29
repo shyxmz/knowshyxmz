@@ -9,6 +9,12 @@ const sliceAnimation = keyframes`
   100% { transform: rotate(0deg) scale(1); }
 `;
 
+// Keyframes for the circular rotation on hover
+const hoverAnimation = keyframes`
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+`;
+
 // Styled component for the sword cursor
 const StyledCursorPointer = styled.div.attrs(props => ({
     style: {
@@ -25,7 +31,7 @@ const StyledCursorPointer = styled.div.attrs(props => ({
     background-repeat: no-repeat;
     pointer-events: none;
     transform-origin: center;
-    animation: ${props => props.clicking ? sliceAnimation : 'none'} 0.3s ease-out;
+    animation: ${props => props.hover ? hoverAnimation : (props.clicking ? sliceAnimation : 'none')} 0.5s linear; /* Adjust duration and timing function as needed */
     transition: transform 0.2s ease; /* Smooth transition for hover effect */
 `;
 
