@@ -1,15 +1,18 @@
-import { useLayoutEffect } from "react";
-import LoadingPage from "./components/LoadingPage";
+import React, { useLayoutEffect, useState } from "react";
+import LoadingPage from "./components/Loading/LoadingPage";
+import HomeNavbar from "./components/Navbar/HomeNavbar";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { useState } from "react";
+import TextScramble from "./components/Effects/TextScramble"; // Import the TextScramble component
 
 export default function App() {
-  const [showHello, setShowHello] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [showHola, setShowHola] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
-  useGSAP(() => {
+  useLayoutEffect(() => {
     let t1 = gsap.timeline();
 
+    // Animate the loading elements
     t1.to(".box", {
       scale: 0,
       y: 60,
@@ -21,33 +24,48 @@ export default function App() {
       stagger: {
         amount: 0.5,
         from: "start",
-        grid: [3,3],
+        grid: [3, 3],
       },
     });
-    
+
     t1.to(".container", {
       rotate: "-405deg",
       scale: 0,
       duration: 1,
     });
-    
+
+    // Transition from loading page to "Hola Amigo" text
     t1.to(".wrapper", {
       opacity: 0,
       display: "none",
-      onComplete: () => setShowHello(true)
+      onComplete: () => {
+        setIsLoading(false);
+        setShowHola(true);
+
+        // After a delay, show the main content with HomeNavbar
+        setTimeout(() => {
+          setShowHola(false); // Hide the "Hola Amigo" text
+          setShowContent(true); // Show the main content
+        }, 1000); // Adjust timing as needed
+      },
     });
-  });
+  }, []);
 
   return (
-    <div className="bg-black h-screen">
-      <LoadingPage />
-      {showHello && (
+    <div className="bg-white h-screen"> {/* Change the background color to white */}
+      {isLoading ? (
+        <LoadingPage />
+      ) : showHola ? (
         <div className="h-screen flex items-center justify-center">
-          <h5 className="glowing-text text-[#b0dae9] text-5xl font-bold uppercase">
-            Hola <br/>
-            Amigo
-          </h5>
+          <TextScramble text="Hola Amigo" />
         </div>
+      ) : (
+        showContent && (
+          <>
+            <HomeNavbar />
+            {/* Other main content can go here */}
+          </>
+        )
       )}
     </div>
   );
