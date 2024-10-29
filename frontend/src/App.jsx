@@ -69,24 +69,25 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#F5F5F5] h-screen relative"> {/* Added relative positioning */}
-      <CursorPointer x={x} y={y} /> {/* Custom cursor component */}
-      {isLoading ? (
-        <LoadingPage />
-      ) : showHola ? (
-        <div className="h-screen bg-[#F5F5F5] flex items-center justify-center">
-          <div className="text-6xl font-bold text-[#333333]"> {/* Style the text as needed */}
-            <TextScramble text="Hola Amigo" />
-          </div>
-        </div>
-      ) : (
-        showContent && (
-          <>
-            <HomeNavbar />
-            {/* Other main content can go here */}
-          </>
-        )
-      )}
+    <div className="bg-[#F5F5F5] h-screen relative" style={{ cursor: 'none' }}> {/* Added inline style */}
+        <CursorPointer x={x} y={y} />
+        {isLoading ? (
+            <LoadingPage />
+        ) : showHola ? (
+            <div className="h-screen bg-[#F5F5F5] flex items-center justify-center">
+                <div className="text-6xl font-bold text-[#333333]">
+                    <TextScramble text="Hola Amigo" />
+                </div>
+            </div>
+        ) : (
+            showContent && (
+                <>
+                    <HomeNavbar />
+                    {/* Other main content can go here */}
+                </>
+            )
+        )}
     </div>
-  );
+);
+
 }
