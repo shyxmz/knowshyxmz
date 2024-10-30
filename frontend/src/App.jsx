@@ -2,8 +2,8 @@ import React, { useLayoutEffect, useState, useEffect } from "react";
 import LoadingPage from "./components/Loading/LoadingPage";
 import HomeNavbar from "./components/Navbar/HomeNavbar";
 import gsap from "gsap";
-import TextScramble from "./components/Effects/TextScramble"; // Import the TextScramble component
-import CursorPointer from "./components/Cursor/Cursor"; // Import the custom cursor
+import TextScramble from "./components/Effects/TextScramble";
+import CursorPointer from "./components/Cursor/Cursor";
 import Section_1 from "./components/Sections/Section_1";
 import Section_2 from "./components/Sections/Section_2";
 
@@ -15,7 +15,6 @@ export default function App() {
   const [showHola, setShowHola] = useState(false);
   const [showContent, setShowContent] = useState(false);
 
-  // Handle mouse movement to update cursor position
   useEffect(() => {
     const handleMouseMovement = (e) => {
       setX(e.clientX);
@@ -31,7 +30,6 @@ export default function App() {
   useLayoutEffect(() => {
     let t1 = gsap.timeline();
 
-    // Animate the loading elements
     t1.to(".box", {
       scale: 0,
       y: 60,
@@ -53,7 +51,6 @@ export default function App() {
       duration: 1,
     });
 
-    // Transition from loading page to "Hola Amigo" text
     t1.to(".wrapper", {
       opacity: 0,
       display: "none",
@@ -61,37 +58,35 @@ export default function App() {
         setIsLoading(false);
         setShowHola(true);
 
-        // After a delay, show the main content with HomeNavbar
         setTimeout(() => {
-          setShowHola(false); // Hide the "Hola Amigo" text
-          setShowContent(true); // Show the main content
-        }, 1300); // Adjust timing as needed
+          setShowHola(false);
+          setShowContent(true);
+        }, 1300);
       },
     });
   }, []);
 
   return (
-    <div className="bg-[#F5F5F5] h-screen relative" style={{ cursor: 'none' }}> {/* Added inline style */}
-        <CursorPointer x={x} y={y} />
-        {isLoading ? (
-            <LoadingPage />
-        ) : showHola ? (
-            <div className="h-screen bg-[#F5F5F5] flex items-center justify-center">
-                <div className="text-6xl font-bold text-[#333333]">
-                    <TextScramble text="Hola Amigo" />
-                </div>
-            </div>
-        ) : (
-            showContent && (
-                <>
-                    <HomeNavbar />
-                    <Section_1 />
-                    <Section_2 />
-                    {/* Other main content can go here */}
-                </>
-            )
-        )}
+    <div className="bg-[#F5F5F5] min-h-screen relative overflow-auto" style={{ cursor: 'none' }}>
+      {/* CursorPointer should be fixed to follow smoothly */}
+      <CursorPointer x={x} y={y} style={{ position: "fixed", pointerEvents: "none" }} />
+      {isLoading ? (
+        <LoadingPage />
+      ) : showHola ? (
+        <div className="h-screen bg-[#F5F5F5] flex items-center justify-center">
+          <div className="text-6xl font-bold text-[#333333]">
+            <TextScramble text="Hola Amigo" />
+          </div>
+        </div>
+      ) : (
+        showContent && (
+          <div>
+            <HomeNavbar />
+            <Section_1 className="min-h-screen" />
+            <Section_2 className="min-h-screen" />
+          </div>
+        )
+      )}
     </div>
-);
-
+  );
 }

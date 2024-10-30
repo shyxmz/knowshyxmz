@@ -20,10 +20,9 @@ const StyledCursorPointer = styled.div.attrs(props => ({
     style: {
         left: `${props.x}px`,
         top: `${props.y}px`,
-        transform: props.clicking ? 'rotate(20deg)' : 'rotate(0deg)',
     }
 }))`
-    position: absolute;
+    position: fixed; /* Change to fixed for consistent positioning */
     width: 32px; /* Adjust as needed */
     height: 32px;
     background-image: url(${swordIcon});
@@ -31,8 +30,8 @@ const StyledCursorPointer = styled.div.attrs(props => ({
     background-repeat: no-repeat;
     pointer-events: none;
     transform-origin: center;
-    animation: ${props => props.hover ? hoverAnimation : (props.clicking ? sliceAnimation : 'none')} 0.5s linear; /* Adjust duration and timing function as needed */
-    transition: transform 0.2s ease; /* Smooth transition for hover effect */
+    animation: ${props => props.hover ? hoverAnimation : (props.clicking ? sliceAnimation : 'none')} 0.5s linear; /* Adjust duration */
+    transition: transform 0.2s ease;
 `;
 
 export default function CursorPointer({ x, y }) {
@@ -45,19 +44,19 @@ export default function CursorPointer({ x, y }) {
 
         const handleMouseClick = () => {
             setIsClicking(true);
-            setTimeout(() => setIsClicking(false), 300); // Remove effect after animation duration
+            setTimeout(() => setIsClicking(false), 300);
         };
 
-        // Select all elements to trigger hover and click effects
-        const interactiveElements = document.querySelectorAll("a, button, li");
-        interactiveElements.forEach(element => {
+        // Attaching hover events for buttons and links globally
+        document.querySelectorAll("a, button, .boxs").forEach(element => {
             element.addEventListener("mouseenter", handleMouseEnter);
             element.addEventListener("mouseleave", handleMouseLeave);
         });
+
         document.addEventListener("click", handleMouseClick);
 
         return () => {
-            interactiveElements.forEach(element => {
+            document.querySelectorAll("a, button, .boxs").forEach(element => {
                 element.removeEventListener("mouseenter", handleMouseEnter);
                 element.removeEventListener("mouseleave", handleMouseLeave);
             });

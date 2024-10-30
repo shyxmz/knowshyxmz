@@ -25,3 +25,9 @@ li {
     box-shadow: 0 0 3px #10abdf;
 }
 
+.boxs{
+    @apply w-48 h-48 text-white font-bold text-2xl p-6 overflow-hidden;
+}
+.num{
+    @apply text-9xl opacity-45 translate-x-10 translate-y-2;
+}
