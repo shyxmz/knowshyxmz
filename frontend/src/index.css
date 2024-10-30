@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer components{
+    .grid_{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+}
+
 * {
     cursor: none; /* Hide the default cursor for all elements */
 }

@@ -1,6 +1,11 @@
 import React from 'react'
 import bg1 from "../../assets/bg1.png"
 import { PiSliders } from "react-icons/pi";
+import icon1 from "../../assets/baldwin.svg"
+import icon2 from "../../assets/hogan.svg"
+import icon3 from "../../assets/sulzer.svg"
+import icon4 from "../../assets/flickr.svg"
+
 
 const Section_1 = () => {
   return (
@@ -48,8 +53,11 @@ const Section_1 = () => {
         </div>
     </div>
     <div className='h-20 border-t border-t-[rgba(1,1,1,.1)]'>
-        <div>
-            <img src="" alt="" />
+        <div className='grid grid_ py-3 gap-4 place-items-center [&>*]:w-24'>
+            <img src={icon1} alt="" />
+            <img src={icon2} alt="" />
+            <img src={icon3} alt="" />
+            <img src={icon4} alt="" />
         </div>
     </div>
     </section>
