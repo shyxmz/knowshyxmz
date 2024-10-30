@@ -7,7 +7,7 @@ import { MdOutlineShoppingBag } from "react-icons/md";
 const HomeNavbar = () => {
   return (
     <div className="h-20 bg-[#F5F5F5] text-black">
-      <div className="flex items-center justify-between px-12 py-4 border-b border-b-[rgba(1,1,1,.1)]">
+      <div className="flex items-center justify-between px-12 py-4 border-b border-b-[rgba(1,1,1,.2)]">
         <div>
           <p className="text-2xl font-bold">
             Lor

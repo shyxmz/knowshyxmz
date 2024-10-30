@@ -4,6 +4,7 @@ import HomeNavbar from "./components/Navbar/HomeNavbar";
 import gsap from "gsap";
 import TextScramble from "./components/Effects/TextScramble"; // Import the TextScramble component
 import CursorPointer from "./components/Cursor/Cursor"; // Import the custom cursor
+import Section_1 from "./components/Sections/Section_1";
 
 export default function App() {
   const [x, setX] = useState(0);
@@ -83,6 +84,7 @@ export default function App() {
             showContent && (
                 <>
                     <HomeNavbar />
+                    <Section_1 />
                     {/* Other main content can go here */}
                 </>
             )
