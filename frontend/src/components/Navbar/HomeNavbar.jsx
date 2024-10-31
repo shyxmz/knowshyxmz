@@ -10,8 +10,8 @@ const HomeNavbar = () => {
       <div className="flex items-center justify-between px-12 py-4 border-b border-b-[rgba(1,1,1,.2)]">
         <div>
           <p className="text-2xl font-bold">
-            Lor
-            <span className='text-[#E74B7E]'>em</span>
+            know
+            <span className='text-[#E74B7E]'>shyxmz</span>
           </p>
         </div>
         <ul className="flex items-center gap-10 [&>*]:text-[#1a253b] font-bold  font-josefin-sans">
