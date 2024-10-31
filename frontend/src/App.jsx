@@ -7,6 +7,7 @@ import CursorPointer from "./components/Cursor/Cursor";
 import Section_1 from "./components/Sections/Section_1";
 import Section_2 from "./components/Sections/Section_2";
 import Section_3 from "./components/Sections/Section_3";
+import Section_4 from "./components/Sections/Section_4";
 
 export default function App() {
   const [x, setX] = useState(0);
@@ -83,9 +84,10 @@ export default function App() {
         showContent && (
           <div>
             <HomeNavbar />
-            <Section_1 className="min-h-screen" />
-            <Section_2 className="min-h-screen" />
-            <Section_3 className="min-h-screen" />
+            <Section_1 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
+            <Section_2 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
+            <Section_3 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
+            <Section_4 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
           </div>
         )
       )}
