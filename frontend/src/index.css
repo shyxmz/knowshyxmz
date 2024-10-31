@@ -31,3 +31,6 @@ li {
 .num{
     @apply text-9xl opacity-45 translate-x-10 translate-y-2;
 }
+.btn{
+    @apply bg-[#1a253b] font-bold text-white p-2 w-56 ;
+}

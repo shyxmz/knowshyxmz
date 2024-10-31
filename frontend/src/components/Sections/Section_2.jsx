@@ -21,14 +21,30 @@ const Section_2 = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="text-content_s2 w-80 flex flex-col gap-4">
-            <h1 className='text-[#1a253b] text-8xl font-bold overflow-hidden'>Frontend dev</h1>
-            <div className='h-7 relative top-2 left-1'>
+        <div className='relative'>
+          <div className="text-content_s2 w-96 gap-8">
+            <h1 className='leading-normal text-[#1a253b] text-7xl font-bold'>
+              Tools
+            </h1>
+            {/* Removed absolute positioning and used margin-top */}
+            <div className='mt-8'>
               <h3 className='text-gray-400 text-xl font-bold'>Tech Stack</h3>
             </div>
-            <p className='text-gray-500 leading-6 text-sm'>React.js <br/> Tailwind CSS <br/> GSAP <br/> Framer Motion <br/> Three.js</p>
-            <button>Exploring more...</button>
+            {/* Increased gap between columns */}
+            <div className='flex gap-12 mb-8 mt-4'>
+              <p className='text-gray-500 leading-8 text-sm'>
+                React.js <br/> Tailwind CSS <br/> GSAP <br/> Framer Motion <br/> Three.js
+              </p>
+              <p className='text-gray-500 leading-8 text-sm'>
+                Node.js <br/> Express.js <br/> MongoDB <br/> Nest.js <br/> MySQL 
+              </p>
+              <p className='text-gray-500 leading-8 text-sm'>
+                C <br/> C++ <br/> Javascript <br/> Java <br/> Python
+              </p>
+            </div>
+            <button className='btn h-[60px] w-full text-lg font-semibold'>
+              Exploring...
+            </button>
           </div>
         </div>
       </div>
