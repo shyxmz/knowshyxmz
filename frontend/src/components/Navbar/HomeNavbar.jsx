@@ -1,5 +1,5 @@
 import React from 'react';
-import { MdOutlineShoppingBag } from "react-icons/md";
+import { MdOutlineArticle } from "react-icons/md"; // Importing a blog icon
 
 // Make sure to add the font import in your index.html or in your main CSS file
 // <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
@@ -14,27 +14,14 @@ const HomeNavbar = () => {
             <span className='text-[#E74B7E]'>shyxmz</span>
           </p>
         </div>
-        <ul className="flex items-center gap-10 [&>*]:text-[#1a253b] font-bold  font-josefin-sans">
-          <li className="hover:text-orange-500 hover:underline hover:underline-offset-4 transition-all duration-300 cursor-none">
-            Blog
-          </li>
-          <li className="hover:text-orange-500 hover:underline hover:underline-offset-4 transition-all duration-300 cursor-none">
-            Projects
-          </li>
-          <li className="hover:text-orange-500 hover:underline hover:underline-offset-4 transition-all duration-300 cursor-none">
-            About
-          </li>
-          <li className="hover:text-orange-500 hover:underline hover:underline-offset-4 transition-all duration-300 cursor-none">
-            Contacts
-          </li>
-        </ul>
-        <div className="flex items-center gap-10">
-          <button className="px-4 py-2 bg-[#F5F5F5] text-[#1a253b] rounded hover:bg-[#e2e2e2] transition-colors duration-300 cursor-none">
-            Sign Up
+        <div className="flex-1 text-center">
+          <h1 className="text-xl font-bold">Portfolio</h1> {/* Centered Portfolio */}
+        </div>
+        <div className="flex items-center gap-4">
+          <button className="flex items-center gap-2 px-4 py-2 bg-[#F5F5F5] text-[#1a253b] rounded hover:bg-[#e2e2e2] transition-colors duration-300 cursor-pointer">
+            <MdOutlineArticle /> {/* Blog icon inside the button */}
+            Blogs
           </button>
-          <div aria-label="Shopping Bag" className="text-2xl cursor-none">
-            <MdOutlineShoppingBag />
-          </div>
         </div>
       </div>
     </div>

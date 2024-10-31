@@ -39,6 +39,7 @@ body {
 .menu-li{
     @apply text-sm text-gray-600
 }
-.white-box{
+.white-box,
+.bg-5 {
     transform-origin: top;
 }

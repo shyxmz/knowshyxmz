@@ -152,6 +152,65 @@ export default function App() {
       duration: 1,
     },0.5);
 
+    const t5 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-4",
+        start: "top center",
+      },
+    });
+
+    t5.from(".img_2", {
+      x:-1000,
+      duration: 1,
+    });
+    t5.from(".img_1", {
+      x:-1000,
+      duration: 1,
+    },0.5);
+    t5.from(".bg-4", {
+      x:-1000,
+      duration: 1,
+    },0.5);
+    t5.from(".txt-1", {
+      opacity:0,
+      duration: 1,
+    },1);
+    t5.from(".txt-2", {
+      opacity:0,
+      duration: 1,
+    },1.2);
+    t5.from(".txt-3", {
+      opacity:0,
+      duration: 1,
+    },0.8);
+    t5.from(".txt-4", {
+      opacity:0,
+      duration: 1,
+    },1.2);
+
+    const t6 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".section-5",
+        start: "top center",
+      },
+    });
+
+    t6.from(".bg-5", {
+      scaleY:0,
+      duration: 1,
+    });
+    t6.from(".side-1", {
+      opacity:0,
+      duration: 1,
+    });
+    t6.from(".side-2", {
+      opacity:0,
+      duration: 1,
+    });
+
+
+
+
   }, [showContent, isFirstLoad]);
 
   return (

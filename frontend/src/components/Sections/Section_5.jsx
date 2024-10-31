@@ -5,7 +5,7 @@ import laptop from "../../assets/desk.jpg"
 const Section_5 = () => {
   return (
     <section className='section-5 h-screen bg-[#eef7fe] flex items-center justify-center'>
-        <div className='h-[550px] w-[1000px] flex items-center justify-around gap-4'
+        <div className='bg-5 h-[550px] w-[1000px] flex items-center justify-around gap-4'
         style={{
             backgroundImage:`url(${bg2})`,
             backgroundPosition:"center",
@@ -16,7 +16,7 @@ const Section_5 = () => {
             <div className="side-1">
                 <h1 className='text-white text-4xl font-bold mb-10'>Lorem Ipsum</h1>
                 <img 
-                className='h-28 w-96 object-cover'
+                className='h-52 w-96 object-cover'
                 src={laptop} alt="" />
             </div>
             <div className="side-2">
