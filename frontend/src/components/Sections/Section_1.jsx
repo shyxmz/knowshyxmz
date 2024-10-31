@@ -42,7 +42,7 @@ const Section_1 = () => {
             </div>
             <div className='overflow-hidden'>
               <button className='btn-2 bg-white text-[#1a253b] py-3 px-6 font-bold'>
-                Start Now
+                Development
               </button>
             </div>
           </div>

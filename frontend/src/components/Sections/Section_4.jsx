@@ -21,7 +21,7 @@ const Section_4 = () => {
               <div className='txt-1 flex flex-col gap-4'>
                 <h1 className='text-xl text-white px-2'>Blogs</h1> {/* Updated text to "Blogs" */}
                 <p className='w-72 text-sm leading-6 text-gray-200 px-2'>
-                  Read my blogs. My blogs sit here. {/* Updated paragraph text */}
+                Exciting updates ahead! Stay connected as I start posting Blogs soon—don’t miss out on what’s coming next! {/* Updated paragraph text */}
                 </p>
               </div>
               <div className='self-end translate-x-20 translate-y-20 flex flex-col gap-4'>
@@ -30,8 +30,8 @@ const Section_4 = () => {
                   src={img1} alt="" 
                 />
                 <div className='txt-2'>
-                  <h4 className='font-bold'>Lorem ipsum dolor sit amet</h4>
-                  <p className='text w-52'>Lorem ipsum dolor, sit amet consectetur adipisicing</p>
+                  <h4 className='font-bold'>Tunes On The Go</h4>
+                  <p className='text w-52'>All I need to get through is a good playlist and a little volume.</p>
                 </div>
               </div>
             </div>
@@ -47,9 +47,9 @@ const Section_4 = () => {
                   src={img2} alt="" 
                 />
                 <div className='txt-4'>
-                  <h4 className='font-bold'>Exlorem, ipsum dolor</h4>
-                  <p className='text w-52'>Lorem ipsum dolor sit amet consectetur adipisicing</p>
-                </div>
+                  <h4 className='font-bold'>Brewed for Focus</h4>
+                  <p className='text w-52'>A warm blend of milk with just a hint of coffee—it’s my secret fuel for tackling late-night ideas and creative breakthroughs.</p>
+                </div>  
               </div>
             </div>
           </div>

@@ -9,6 +9,8 @@ import Section_2 from "./components/Sections/Section_2";
 import Section_3 from "./components/Sections/Section_3";
 import Section_4 from "./components/Sections/Section_4";
 import Section_5 from "./components/Sections/Section_5";
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -232,26 +234,63 @@ export default function App() {
           <Section_3 className="h-[95vh] mb-0" />
           <Section_4 className="h-[95vh] mb-0" />
           <Section_5 className="h-[95vh] mb-0" />
-          <footer className="py-4">
-            <div className="flex justify-start items-center p-4 space-x-48">
-              <div>
-                <p className="font-bold mb-4">
-                  Shy<span className="text-[#E74B7E]">am</span>
-                </p>
-                <p className="w-72">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry,
-                  ever since the 1500s.
-                </p>
-              </div>
-              <ul className="menu grid grid-cols-2 gap-4">
-                <p className="menu-p col-span-2">Links</p>
-                <li className="menu-li">Github</li>
-                <li className="menu-li">LinkedIn</li>
-                <li className="menu-li">Leetcode</li>
-                <li className="menu-li">Instagram</li>
-              </ul>
-            </div>
-          </footer>
+          <footer className="py-6">
+  <div className="flex justify-start items-center p-6 space-x-60">
+    <div>
+      <p className="font-bold text-xl mb-4">
+        Shy<span className="text-[#E74B7E]">am</span>
+      </p>
+      <p className="w-80 text-lg">
+      "Comment your code so the next person knows exactly who to thank—or blame."
+      </p>
+    </div>
+    <ul className="menu grid grid-cols-2 gap-6">
+      <p className="menu-p col-span-2 text-lg font-semibold">Links</p>
+      <li className="menu-li">
+        <a
+          href="https://github.com/shyxmz"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-3 text-xl hover:text-blue-500"
+        >
+          <FaGithub size={24} /> <span>Github</span>
+        </a>
+      </li>
+      <li className="menu-li">
+        <a
+          href="https://www.linkedin.com/in/shyam-modi-1729zyu/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-3 text-xl hover:text-blue-500"
+        >
+          <FaLinkedin size={24} /> <span>LinkedIn</span>
+        </a>
+      </li>
+      <li className="menu-li">
+        <a
+          href="https://leetcode.com/u/z_stan/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-3 text-xl hover:text-blue-500"
+        >
+          <SiLeetcode size={24} /> <span>Leetcode</span>
+        </a>
+      </li>
+      <li className="menu-li">
+        <a
+          href="https://www.instagram.com/shyxm.zz/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center space-x-3 text-xl hover:text-blue-500"
+        >
+          <FaInstagram size={24} /> <span>Instagram</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
         </div>
       )
     )}

@@ -14,7 +14,7 @@ const Section_5 = () => {
         }}
         >
             <div className="side-1">
-                <h1 className='text-white text-4xl font-bold mb-10'>Lorem Ipsum</h1>
+                <h1 className='text-white text-4xl font-bold mb-10'>Coming soon...</h1>
                 <img 
                 className='h-52 w-96 object-cover'
                 src={laptop} alt="" />
