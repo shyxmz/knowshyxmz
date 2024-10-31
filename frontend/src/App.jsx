@@ -6,6 +6,7 @@ import TextScramble from "./components/Effects/TextScramble";
 import CursorPointer from "./components/Cursor/Cursor";
 import Section_1 from "./components/Sections/Section_1";
 import Section_2 from "./components/Sections/Section_2";
+import Section_3 from "./components/Sections/Section_3";
 
 export default function App() {
   const [x, setX] = useState(0);
@@ -84,6 +85,7 @@ export default function App() {
             <HomeNavbar />
             <Section_1 className="min-h-screen" />
             <Section_2 className="min-h-screen" />
+            <Section_3 className="min-h-screen" />
           </div>
         )
       )}

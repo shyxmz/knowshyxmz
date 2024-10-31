@@ -22,8 +22,8 @@ const Section_2 = () => {
           </div>
         </div>
         <div className='relative'>
-          <div className="text-content_s2 w-96 gap-8">
-            <h1 className='leading-normal text-[#1a253b] text-7xl font-bold'>
+          <div className="text-content_s2 w-96  gap-8">
+            <h1 className='leading-normal text-[#1a253b] text-6xl font-bold'>
               Tools
             </h1>
             {/* Removed absolute positioning and used margin-top */}

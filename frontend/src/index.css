@@ -34,3 +34,6 @@ li {
 .btn{
     @apply bg-[#1a253b] font-bold text-white p-2 w-56 ;
 }
+.text{
+    @apply text-sm text-gray-500 leading-6;
+}
