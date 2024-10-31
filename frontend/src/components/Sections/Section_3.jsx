@@ -19,23 +19,22 @@ const Section_3 = () => {
               <div className="white-box-content h-full flex flex-col gap-4 p-8">
                 <h1 className='text-xl font-bold text-[#1a253b]'>Projects</h1>
                 <p className='w-72 text'>
-                  blah blah blah blah blah blah blah blah blah blah blah.
-                  blah blah blah.?
+                  I am passionate about web-based projects that showcase sleek frontend designs and clean code. Each project reflects my commitment to quality and usability.
                 </p>
                 <div className='flex gap-6'>
                   <div>
-                    <p className='font-bold text-[#1a253b] text-xl'>1</p>
-                    <span className='text-gray-600 text-xs font-bold'>StartHub</span>
+                    <p className='font-bold text-[#1a253b] text-xl'>StartHub</p>
+                    <span className='text-gray-600 text-xs font-bold'>Team</span>
                     <div className='h-1 w-8 bg-[#54c6ff] mt-1'></div>
                   </div>
                   <div>
-                    <p className='font-bold text-[#1a253b] text-xl'>2</p>
-                    <span className='text-gray-600 text-xs font-bold'>DeSpace</span>
+                    <p className='font-bold text-[#1a253b] text-xl'>DeSpace</p>
+                    <span className='text-gray-600 text-xs font-bold'>Personal</span>
                     <div className='h-1 w-8 bg-[#316bf4] mt-1'></div>
                   </div>
                   <div>
-                    <p className='font-bold text-[#1a253b] text-xl'>3</p>
-                    <span className='text-gray-600 text-xs font-bold'>MemeSaber</span>
+                    <p className='font-bold text-[#1a253b] text-xl'>MemeSaber</p>
+                    <span className='text-gray-600 text-xs font-bold'>Team</span>
                     <div className='h-1 w-8 bg-[#E74B7E] mt-1'></div>
                   </div>
                 </div>
@@ -45,15 +44,12 @@ const Section_3 = () => {
         </div>
         <div className='overflow-hidden'>
           <div className="text-content_s3 flex flex-col gap-4 w-80">
-            <span className='text-8xl font-bold text-[#1a253b]'>new</span>
+            <span className='text-8xl font-bold text-[#1a253b]'>DeSpace</span>
             <p className='text'>
-              blah blah blah blah blah blah blah blah blahblah blah blah.
-              blah blahblahblahblah blahblah blahblah blahblah blahblah blahblahb,blah
-              blah blah blah blahblah!
+              DeSpace is a website offering real-time satellite data. It uses extensive datasets for accurate information, making it invaluable for researchers and enthusiasts. It also features a data library with numerous astronomy research papers, empowering users to explore the cosmos and collaborate within the scientific community.
             </p>
             <p className='text'>
-              blah blahblahblahblah blahblah blahblah blahblah blahblah blahblahb,blah
-              blah blah blah blahblah!
+              With its user-friendly interface, DeSpace makes complex satellite data accessible. Whether a student, researcher, or astronomy enthusiast, DeSpace provides tools to fuel your curiosity for space exploration.
             </p>
             <button className='btn'>Working...</button>
           </div>
