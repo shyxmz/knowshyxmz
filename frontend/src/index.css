@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+  }
+  
+
 @layer components{
     .grid_{
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -32,4 +38,7 @@
 }
 .menu-li{
     @apply text-sm text-gray-600
+}
+.white-box{
+    transform-origin: top;
 }

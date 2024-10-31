@@ -7,7 +7,7 @@ const Section_3 = () => {
       <div className='h-full flex items-center justify-center [&>*]:flex-1'>
         <div className='h-full flex items-center justify-center'>
           <div
-            className='h-[500px] w-[480px] flex items-center'
+            className='bg-3 h-[500px] w-[480px] flex items-center'
             style={{
               backgroundImage: `url(${bg1})`,
               backgroundPosition: "center",

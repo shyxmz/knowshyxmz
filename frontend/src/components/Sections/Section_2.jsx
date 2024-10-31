@@ -5,7 +5,7 @@ const Section_2 = () => {
     <section className='section-2 h-screen'>
       <div className='h-full flex [&>*]:flex-1 items-center'>
         <div className='flex items-center justify-center'>
-          <div className='w-[400px] [&>*]:w-48 [&>*]:h-48 flex flex-wrap items-center justify-center overflow-hidden'>
+          <div className='w-[385px] [&>*]:w-48 [&>*]:h-48 flex flex-wrap items-center justify-center overflow-hidden'>
             <div></div>
             <div className="boxs boxs-1 bg-[#54c6ff]">
               <p>Frontend Dev</p>
@@ -21,14 +21,14 @@ const Section_2 = () => {
             </div>
           </div>
         </div>
-        <div className='relative'>
+        <div className='relative overflow-hidden'>
           <div className="text-content_s2 w-96  gap-8">
             <h1 className='leading-normal text-[#1a253b] text-6xl font-bold'>
               Tools
             </h1>
             {/* Removed absolute positioning and used margin-top */}
             <div className='mt-8'>
-              <h3 className='text-gray-400 text-xl font-bold'>Tech Stack</h3>
+              <h3 className='sm_text text-gray-400 text-xl font-bold'>Tech Stack</h3>
             </div>
             {/* Increased gap between columns */}
             <div className='flex gap-12 mb-8 mt-4'>
