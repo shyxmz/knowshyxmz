@@ -8,19 +8,6 @@
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 }
-
-* {
-    cursor: none; /* Hide the default cursor for all elements */
-}
-
-body, 
-a, 
-button, 
-li {
-    cursor: none; /* Additional rule for specific interactive elements */
-}
-
-
 .box {
     box-shadow: 0 0 3px #10abdf;
 }
@@ -36,4 +23,13 @@ li {
 }
 .text{
     @apply text-sm text-gray-500 leading-6;
+}
+.menu{
+    @apply flex flex-col justify-center gap-2 text-sm;
+}
+.menu-p{
+    @apply font-bold mb-4;
+}
+.menu-li{
+    @apply text-sm text-gray-600
 }

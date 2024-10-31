@@ -1,33 +1,18 @@
-import React, { useLayoutEffect, useState, useEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import LoadingPage from "./components/Loading/LoadingPage";
 import HomeNavbar from "./components/Navbar/HomeNavbar";
 import gsap from "gsap";
 import TextScramble from "./components/Effects/TextScramble";
-import CursorPointer from "./components/Cursor/Cursor";
 import Section_1 from "./components/Sections/Section_1";
 import Section_2 from "./components/Sections/Section_2";
 import Section_3 from "./components/Sections/Section_3";
 import Section_4 from "./components/Sections/Section_4";
+import Section_5 from "./components/Sections/Section_5";
 
 export default function App() {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
-
   const [isLoading, setIsLoading] = useState(true);
   const [showHola, setShowHola] = useState(false);
   const [showContent, setShowContent] = useState(false);
-
-  useEffect(() => {
-    const handleMouseMovement = (e) => {
-      setX(e.clientX);
-      setY(e.clientY);
-    };
-    document.addEventListener("mousemove", handleMouseMovement);
-
-    return () => {
-      document.removeEventListener("mousemove", handleMouseMovement);
-    };
-  }, []);
 
   useLayoutEffect(() => {
     let t1 = gsap.timeline();
@@ -69,9 +54,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#F5F5F5] min-h-screen relative overflow-auto" style={{ cursor: 'none' }}>
-      {/* CursorPointer should be fixed to follow smoothly */}
-      <CursorPointer x={x} y={y} style={{ position: "fixed", pointerEvents: "none" }} />
+    <div className="bg-[#F5F5F5] min-h-screen relative overflow-auto">
       {isLoading ? (
         <LoadingPage />
       ) : showHola ? (
@@ -88,6 +71,27 @@ export default function App() {
             <Section_2 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
             <Section_3 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
             <Section_4 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
+            <Section_5 style={{ backgroundColor: '#F5F5F5' }} className="min-h-screen" />
+            <footer className="py-4">
+              <div className="flex justify-start items-center p-4 space-x-48">
+                <div>
+                  <p className="font-bold mb-4">
+                    Shy<span className="text-[#E74B7E]">am</span>
+                  </p>
+                  <p className="w-72">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry,
+                    ever since the 1500s.
+                  </p>
+                </div>
+                <ul className="menu grid grid-cols-2 gap-4">
+                  <p className="menu-p col-span-2">Links</p>
+                  <li className="menu-li">Github</li>
+                  <li className="menu-li">LinkedIn</li>
+                  <li className="menu-li">Leetcode</li>
+                  <li className="menu-li">Instagram</li>
+                </ul>
+              </div>
+            </footer>
           </div>
         )
       )}
