@@ -48,13 +48,13 @@ const Section_2 = () => {
               Tools
             </h1>
             <div className='mt-8'>
-              <h3 className='sm_text text-gray-400 text-xl font-bold'>Tech Stack</h3>
+              <h3 className='sm_text text-gray-500 text-xl font-bold'>Tech Stack</h3>
             </div>
             <div className='flex gap-12 mb-8 mt-4'>
 
               {/* Frontend Stack */}
               <div className='text-gray-500 text-sm'>
-                <h3 className='text-lg font-semibold text-gray-400 mb-4 px-2'>Frontend</h3>
+                <h3 className='text-lg font-semibold text-[#2b3e63] mb-4 px-2'>Frontend</h3>
                 <div className='flex items-center gap-2 mb-3 transition-transform duration-300 hover:scale-110 px-2'>
                   <FaReact className="w-4 h-4 text-[#61DAFB]" /> React.js
                 </div>
@@ -73,8 +73,8 @@ const Section_2 = () => {
               </div>
               
               {/* Backend Stack */}
-              <div className='text-gray-500 text-sm'>
-                <h3 className='text-lg font-semibold text-gray-400 mb-4 px-2'>Backend</h3>
+              <div className='text-gray-500 text-sm'> 
+                <h3 className='text-lg font-semibold text-[#2b3e63] mb-4 px-2'>Backend</h3>
                 <div className='flex items-center gap-2 mb-3 transition-transform duration-300 hover:scale-110 px-2'>
                   <FaNodeJs className="w-4 h-4 text-[#339933]" /> Node.js
                 </div>
@@ -94,7 +94,7 @@ const Section_2 = () => {
               
               {/* Programming Languages */}
               <div className='text-gray-500 text-sm'>
-                <h3 className='text-lg font-semibold text-gray-400 mb-4 px-2'>Languages</h3>
+                <h3 className='text-lg font-semibold text-[#2b3e63] mb-4 px-2'>Languages</h3>
                 <div className='flex items-center gap-2 mb-3 transition-transform duration-300 hover:scale-110 px-2'>
                   <SiC className="w-4 h-4 text-[#A8B9CC]" /> C
                 </div>
