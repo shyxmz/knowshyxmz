@@ -5,17 +5,18 @@ import icon1 from "../../assets/baldwin.svg";
 import icon2 from "../../assets/hogan.svg";
 import icon3 from "../../assets/sulzer.svg";
 import icon4 from "../../assets/flickr.svg";
+import DevelopmentButton from '../Buttons/Section_1_button'; // adjust the path as needed
 
 const Section_1 = () => {
   return (
     <section>
       <div className='h-[calc(100vh-10rem)] flex [&>*]:flex-1'>
         <div className='flex justify-center'>
-          <div className='flex flex-col justify-around pl-10'> {/* Added padding-left to push right */}
+          <div className='flex flex-col justify-around pl-10'> {/* Adjust padding-left to push right */}
             <h1 className='txt text-8xl font-bold text-[#1a253b]'>
               <span className='border-b-8 border-b-[#1a253b]'>Shyam</span> Modi
             </h1>
-            <p className='txt opacity-50'> 
+            <p className='txt opacity-50'> {/* Reduced margin-top to bring text closer */}
               Currently pursuing a B.Tech in CSE at IIIT Sri City, diving into the exciting challenges of my second year, with a strong interest in competitive programming, data structures and algorithms, and DevOps.
             </p>
           </div>

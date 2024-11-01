@@ -1,5 +1,6 @@
 import React from 'react';
 import bg1 from '../../assets/bg1.png';
+import Button from '../Buttons/Section_3_button';
 
 const Section_3 = () => {
   return (
@@ -51,7 +52,7 @@ const Section_3 = () => {
             <p className='text'>
               With its user-friendly interface, DeSpace makes complex satellite data accessible. Whether a student, researcher, or astronomy enthusiast, DeSpace provides tools to fuel your curiosity for space exploration.
             </p>
-            <button className='btn'>Working...</button>
+            <Button />
           </div>
         </div>
       </div>

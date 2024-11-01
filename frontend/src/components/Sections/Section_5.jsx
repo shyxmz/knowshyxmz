@@ -1,6 +1,7 @@
 import React from 'react'
 import bg2 from '../../assets/bg2.png'
 import laptop from "../../assets/desk.jpg"
+import Button from '../Buttons/Section_3_button';
 
 const Section_5 = () => {
   return (
@@ -23,7 +24,7 @@ const Section_5 = () => {
                 <p className='w-72 text-xs text-gray-200 leading-6 mb-10'>
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
                 </p>
-                <button className='bg-gray-200 text-[#1a253b] font-bold px-6 py-3'>Loreming</button>
+                <Button />
             </div>
         </div>
     </section>
