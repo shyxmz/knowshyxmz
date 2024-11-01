@@ -235,60 +235,89 @@ export default function App() {
           <Section_4 className="h-[95vh] mb-0" />
           <Section_5 className="h-[95vh] mb-0" />
           <footer className="py-6">
-  <div className="flex justify-start items-center p-6 space-x-60">
-    <div>
-      <p className="font-bold text-xl mb-4">
-        Shy<span className="text-[#E74B7E]">am</span>
-      </p>
-      <p className="w-80 text-lg">
-      "Comment your code so the next person knows exactly who to thank—or blame."
-      </p>
-    </div>
-    <ul className="menu grid grid-cols-2 gap-6">
-      <p className="menu-p col-span-2 text-lg font-semibold">Links</p>
-      <li className="menu-li">
-        <a
-          href="https://github.com/shyxmz"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-3 text-xl hover:text-blue-500"
-        >
-          <FaGithub size={24} /> <span>Github</span>
-        </a>
-      </li>
-      <li className="menu-li">
-        <a
-          href="https://www.linkedin.com/in/shyam-modi-1729zyu/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-3 text-xl hover:text-blue-500"
-        >
-          <FaLinkedin size={24} /> <span>LinkedIn</span>
-        </a>
-      </li>
-      <li className="menu-li">
-        <a
-          href="https://leetcode.com/u/z_stan/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-3 text-xl hover:text-blue-500"
-        >
-          <SiLeetcode size={24} /> <span>Leetcode</span>
-        </a>
-      </li>
-      <li className="menu-li">
-        <a
-          href="https://www.instagram.com/shyxm.zz/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center space-x-3 text-xl hover:text-blue-500"
-        >
-          <FaInstagram size={24} /> <span>Instagram</span>
-        </a>
-      </li>
-    </ul>
-  </div>
-</footer>
+      <div className="flex justify-start items-center p-6 space-x-60">
+        <div>
+          <p className="font-bold text-xl mb-4">
+            Shy<span className="text-[#E74B7E]">am</span>
+          </p>
+          <p className="w-80 text-lg">
+            "Comment your code so the next person knows exactly who to thank—or blame."
+          </p>
+        </div>
+        <div className="space-y-6">
+          <p className="menu-p text-lg font-semibold">Links</p>
+          <div className="grid grid-cols-2 gap-6">
+            {/* Instagram Button */}
+            <div className="flex items-center space-x-3">
+              <div className="social-button">
+                <a href="https://www.instagram.com/shyxm.zz/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <button className="relative w-12 h-12 rounded-full group">
+                    <div className="floater w-full h-full absolute top-0 left-0 bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl" />
+                    <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-gradient-to-tr from-yellow-400 via-red-500 to-purple-500 rounded-full">
+                      <svg xmlns="http://www.w3.org/2000/svg" width={22} height={22} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                      </svg>
+                    </div>
+                  </button>
+                  <span className="text-xl">Instagram</span>
+                </a>
+              </div>
+            </div>
+
+            {/* GitHub Button */}
+            <div className="flex items-center space-x-3">
+              <div className="social-button">
+                <a href="https://github.com/shyxmz" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <button className="relative w-12 h-12 rounded-full group">
+                    <div className="floater w-full h-full absolute top-0 left-0 bg-black rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl" />
+                    <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-black rounded-full">
+                      <svg height={24} width={24} viewBox="0 0 24 24">
+                        <path className="group-hover:fill-[#171543] fill-white duration-300" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.654 1.652.243 2.873.119 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                      </svg>
+                    </div>
+                  </button>
+                  <span className="text-xl">Github</span>
+                </a>
+              </div>
+            </div>
+
+            {/* LinkedIn Button */}
+            <div className="flex items-center space-x-3">
+              <div className="social-button">
+                <a href="https://www.linkedin.com/in/shyam-modi-1729zyu/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <button className="relative w-12 h-12 rounded-full group">
+                    <div className="floater w-full h-full absolute top-0 left-0 bg-blue-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl" />
+                    <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-blue-500 rounded-full">
+                      <svg height={24} width={24} viewBox="0 0 24 24" className="fill-white group-hover:fill-[#171543] duration-300">
+                        <path d="M20,2H4C2.9,2,2,2.9,2,4v16c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V4C22,2.9,21.1,2,20,2z M8.5,19H6V10h2.5V19z M7.3,9 h-0.1C6.4,9,6,8.6,6,8.1V7.9c0-0.5,0.4-0.9,1.2-0.9h0.1c0.8,0,1.2,0.4,1.2,0.9v0.1C8.5,8.6,8.1,9,7.3,9z M18,19h-2.5v-4.6c0-1.1-0.4-1.9-1.3-1.9c-0.7,0-1.1,0.5-1.3,1v5.5H10V10h2.4v1.2c0.3-0.6,1-1.5,2.4-1.5c1.7,0,3,1.1,3,3.6V19z" />
+                      </svg>
+                    </div>
+                  </button>
+                  <span className="text-xl">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Leetcode Button */}
+            <div className="flex items-center space-x-3">
+              <div className="social-button">
+                <a href="https://leetcode.com/u/z_stan/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-3">
+                  <button className="relative w-12 h-12 rounded-full group">
+                    <div className="floater w-full h-full absolute top-0 left-0 bg-yellow-500 rounded-full duration-300 group-hover:-top-8 group-hover:shadow-2xl" />
+                    <div className="icon relative z-10 w-full h-full flex items-center justify-center border-2 border-yellow-500 rounded-full">
+                      <SiLeetcode className="w-6 h-6 text-white group-hover:text-[#171543] duration-300" />
+                    </div>
+                  </button>
+                  <span className="text-xl">Leetcode</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
         </div>
