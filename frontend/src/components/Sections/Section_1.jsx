@@ -29,10 +29,10 @@ const Section_1 = () => {
             backgroundRepeat: "no-repeat",
           }}
         >
-          <div className='w-96 px-12 py-20 text-white flex flex-col gap-4'>
-            <span className='txt'>About</span>
-            <h1 className='txt text-xl font-bold'>What I'm interested in?</h1>
-            <p className='txt text-sm leading-6 text-gray-200'>
+          <div className='w-[500px] px-12 py-20 text-white flex flex-col gap-4'>
+            <span className='txt text-6xl'>About</span>
+            <h1 className='txt text-4xl font-extralight'>What I'm interested in?</h1>
+            <p className='txt text-xl leading-7 text-gray-100 font-light'>
               Having a strong foundation in Web 2 technologies, I am now excited to explore Web 3 innovations, including blockchain, Solidity, smart contracts, and decentralized applications (DApps). Additionally, I have a keen interest in DevOps technologies such as Kubernetes, Docker, Jenkins, and Terraform, which enhance development workflows and infrastructure management.
             </p>
           </div>
