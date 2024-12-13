@@ -8,7 +8,6 @@ import Section_1 from "./components/Sections/Section_1";
 import Section_2 from "./components/Sections/Section_2";
 import Section_3 from "./components/Sections/Section_3";
 import Section_4 from "./components/Sections/Section_4";
-import Section_5 from "./components/Sections/Section_5";
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
@@ -197,19 +196,6 @@ export default function App() {
       },
     });
 
-    t6.from(".bg-5", {
-      scaleY:0,
-      duration: 1,
-    });
-    t6.from(".side-1", {
-      opacity:0,
-      duration: 1,
-    });
-    t6.from(".side-2", {
-      opacity:0,
-      duration: 1,
-    });
-
 
 
 
@@ -229,11 +215,10 @@ export default function App() {
       showContent && (
         <div>
           <HomeNavbar />
-          <Section_1 className="h-[95vh] mb-0" />
-          <Section_2 className="h-[95vh] mb-0" />
-          <Section_3 className="h-[95vh] mb-0" />
-          <Section_4 className="h-[95vh] mb-0" />
-          <Section_5 className="h-[95vh] mb-0" />
+          <Section_1 className="h-[100vh] mb-0" />
+          <Section_2 className="h-[100vh] mb-0" />
+          <Section_3 className="h-[100vh] mb-0" />
+          <Section_4 className="h-[100vh] mb-0" />
           <footer className="py-6">
       <div className="flex justify-start items-center p-6 space-x-60">
         <div>

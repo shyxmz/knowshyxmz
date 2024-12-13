@@ -23,9 +23,9 @@ import Button from '../Buttons/Section_2_button'; // Import the Button component
 const Section_2 = () => {
   return (
     <section className='section-2 h-screen'>
-      <div className='h-full flex [&>*]:flex-1 items-center'>
+      <div className='h-[calc(100vh-3rem)] flex [&>*]:flex-1 items-center'>
         <div className='flex items-center justify-center'>
-          <div className='w-[450px] [&>*]:w-48 [&>*]:h-48 flex flex-wrap items-center justify-center overflow-hidden'>
+          <div className='w-[650px] [&>*]:w-64 [&>*]:h-64 flex flex-wrap items-center justify-center overflow-hidden'>
             <div></div>
             <div className="boxs boxs-1 bg-[#54c6ff]">
               <p>Frontend Dev</p>

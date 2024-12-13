@@ -5,7 +5,7 @@ import Button from '../Buttons/Section_3_button';
 const Section_3 = () => {
   return (
     <section className='section-3 h-screen' style={{ backgroundColor: '#F5F5F5' }}>
-      <div className='h-full flex items-center justify-center [&>*]:flex-1'>
+      <div className='h-[calc(100vh-rem)] flex items-center justify-center [&>*]:flex-1'>
         <div className='h-full flex items-center justify-center'>
           <div
             className='bg-3 h-[500px] w-[480px] flex items-center'

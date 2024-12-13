@@ -5,8 +5,8 @@ import img2 from "../../assets/flat.jpg";
 
 const Section_4 = () => {
   return (
-    <section className='section-4 h-screen'>
-      <div className='h-full [&>*]:flex-1 flex'>
+    <section className='section-4 h-[70vh]'>
+      <div className='h-[calc(100vh-30rem)] [&>*]:flex-1 flex'>
         <div className='flex items-center justify-center'>
           <div className='h-[500px] w-[400px] flex flex-col gap-4'>
             <div
